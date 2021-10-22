@@ -20,10 +20,10 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ GITHUB_REPOSITORY }}:latest
+          tags: ${{ github.repository }}:latest
       - name: Build and push to commit ref
         id: docker_build_commit
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ GITHUB_REPOSITORY }}:${{ GITHUB_SHA }}
+          tags: ${{ github.repository }}:${{ github.sha }}
