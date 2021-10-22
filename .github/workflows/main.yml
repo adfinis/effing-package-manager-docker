@@ -21,7 +21,7 @@ jobs:
       - name: Prepare Image Metadata
         id: prep
         run: |
-          DOCKER_IMAGE=ghcr.io/adfinis-sygroup/effing-package-manager-docker
+          DOCKER_IMAGE=gcr.io/adfinis-sygroup/effing-package-manager
           VERSION=noop
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
