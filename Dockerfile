@@ -12,6 +12,6 @@ RUN apt-get update && \
       cpio \
       make && \
     gem install --no-ri --no-rdoc fpm && \
-    apt-get remove -y --purge build-essential ruby-dev && \
+    apt-get remove -y --purge ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
