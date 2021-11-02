@@ -11,7 +11,7 @@ RUN apt-get update && \
       python-setuptools \
       cpio \
       make && \
-    gem install --no-ri --no-rdoc fpm && \
+    gem install --no-document fpm && \
     apt-get remove -y --purge build-essential ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
