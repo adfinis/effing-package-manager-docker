@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:bullseye
 MAINTAINER adfinis-sygroup.ch <info@adfinis-sygroup.ch>
 
 RUN apt-get update && \
