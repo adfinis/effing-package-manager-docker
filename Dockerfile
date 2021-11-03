@@ -1,5 +1,5 @@
-FROM debian:stretch
-MAINTAINER adfinis-sygroup.ch <info@adfinis-sygroup.ch>
+FROM debian:bullseye
+MAINTAINER adfinis.com <info@adfinis.com>
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -11,7 +11,7 @@ RUN apt-get update && \
       python-setuptools \
       cpio \
       make && \
-    gem install --no-ri --no-rdoc fpm && \
+    gem install --no-document fpm && \
     apt-get remove -y --purge ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
