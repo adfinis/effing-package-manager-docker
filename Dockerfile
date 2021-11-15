@@ -3,13 +3,14 @@ MAINTAINER adfinis.com <info@adfinis.com>
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+      binutils \
+      build-essential \
+      cpio \
+      git \
+      python-setuptools \
+      rpm \
       ruby \
       ruby-dev \
-      build-essential \
-      rpm \
-      binutils \
-      python-setuptools \
-      cpio \
       make && \
     gem install --no-document fpm && \
     apt-get remove -y --purge ruby-dev && \
