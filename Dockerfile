@@ -11,6 +11,7 @@ RUN apt-get update && \
       rpm \
       ruby \
       ruby-dev \
+      wget \
       make && \
     gem install --no-document fpm && \
     apt-get remove -y --purge ruby-dev && \
