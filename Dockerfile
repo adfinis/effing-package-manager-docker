@@ -1,5 +1,7 @@
 FROM debian:bullseye
 
+ARG FPM_VERSION=1.14.0
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       binutils \
