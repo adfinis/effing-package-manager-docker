@@ -1,5 +1,4 @@
 FROM debian:bullseye
-MAINTAINER adfinis.com <info@adfinis.com>
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
