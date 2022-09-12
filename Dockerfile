@@ -19,4 +19,6 @@ RUN apt-get update && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
+WORKDIR "/app"
+
 ENTRYPOINT ["fpm"]
