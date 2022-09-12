@@ -14,7 +14,7 @@ RUN apt-get update && \
       ruby-dev \
       wget \
       make && \
-    gem install --no-document fpm && \
+    gem install --no-document fpm:${FPM_VERSION} && \
     apt-get remove -y --purge ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
