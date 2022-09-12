@@ -18,3 +18,5 @@ RUN apt-get update && \
     apt-get remove -y --purge ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["fpm"]
