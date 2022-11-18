@@ -1,5 +1,6 @@
 FROM debian:bullseye
-MAINTAINER adfinis.com <info@adfinis.com>
+
+ARG FPM_VERSION=1.14.0
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -13,7 +14,11 @@ RUN apt-get update && \
       ruby-dev \
       wget \
       make && \
-    gem install --no-document fpm && \
+    gem install --no-document fpm:${FPM_VERSION} && \
     apt-get remove -y --purge ruby-dev && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
+
+WORKDIR "/app"
+
+ENTRYPOINT ["fpm"]
